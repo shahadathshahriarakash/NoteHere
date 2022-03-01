@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="card">
+
+          <div class="card-header">
+              <h3 align="center">Sign Up</h3>
+          </div>
+
+          <div class="card-body">
+            <form method="post" class="mb-3">
+
+              <div class="row">
+                  <div class="mb-3">
+                    <label for="firstName" class="form-label">First name*</label>
+                    <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name">
+                  </div>
+                  <div class="mb-3">
+                    <label for="lastName" class="form-label">Last Name*</label>
+                    <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name">
+                  </div>
+              </div>
+
+              <div class="row">
+                  <div class="mb-3 col-5">
+                    <label for="username" class="form-label">Username*</label>
+                    <input type="text" class="form-control" id="username" name="username" placeholder="username">
+                  </div>
+                  <div class="mb-3 col-7">
+                    <label for="email" class="form-label">Email address*</label>
+                    <input type="email" class="form-control" aria-describedby="emailHelp" id="email" name="email" placeholder="Email Address">
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                  </div>
+              </div>
+
+              <div class="row">
+                  <div class="mb-3 col-6">
+                    <label for="password1" class="form-label">Password*</label>
+                    <input type="password" class="form-control" id="password1" name="password1" placeholder="Create Password">
+                  </div>
+                  <div class="mb-3 col-6">
+                    <label for="password2" class="form-label">Confirm Password*</label>
+                    <input type="password" class="form-control" id="password2" name="password2" placeholder="Confirm Password">
+                  </div>
+              </div>
+
+              <button type="submit" class="btn btn-outline-primary">Sign Up</button>
+
+            </form>
+
+            <div class="card-text mt-2 border-top pt-3">
+              <p>Have an account? <a href="{{ url_for('auth.login') }}" class="ml-2">Log In.</a></p>
+            </div>
+
+          </div>
+
+    </div>
+{% endblock content %}
